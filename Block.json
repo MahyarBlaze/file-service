@@ -1,0 +1,83 @@
+[
+    {
+      "code": "",
+      "color": "#FF000000",
+      "name": "auth",
+      "typeName": "",
+      "palette": "12",
+      "type": "h",
+      "spec": "Authentication blocks"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"username\", %2$s);\n%1$s.put(\"password\", %3$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.POST, \"https://website-url.ir/api/auth\", \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "auth-login",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Login %m.varMap ○ Username %s ○ Password %s"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"username\", %2$s);\n%1$s.put(\"email\", %3$s);\n%1$s.put(\"password\", %4$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.POST, \"https://website-url.ir/api/auth\", \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "auth-register",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Register %m.varMap ○ Username %s ○ Email %s ○ Password %s"
+    },
+    {
+      "code": "",
+      "color": "#FF000000",
+      "name": "files",
+      "typeName": "",
+      "palette": "12",
+      "type": "h",
+      "spec": "File management blocks"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"Authorization\", \"Bearer \" + %2$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.GET, \"https://website-url.ir/api/files\", \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "files-get-all",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Get Files %m.varMap ○ Token %s"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"Authorization\", \"Bearer \" + %2$s);\n%1$s.put(\"password\", %3$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.GET, \"https://website-url.ir/api/files/\" + %4$s, \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "files-get",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Get File %m.varMap ○ Token %s ○ Password %s ○ File ID %s"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"Authorization\", \"Bearer \" + %2$s);\n%1$s.put(\"name\", %3$s);\n%1$s.put(\"type\", %4$s);\n%1$s.put(\"content\", %5$s);\n%1$s.put(\"is_protected\", %6$s);\n%1$s.put(\"password\", %7$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.POST, \"https://website-url.ir/api/files\", \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "files-create",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Create File %m.varMap ○ Token %s ○ Name %s ○ Type %s ○ Content %s ○ Is Protected %b ○ Password %s"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"Authorization\", \"Bearer \" + %2$s);\n%1$s.put(\"content\", %3$s);\n%1$s.put(\"password\", %4$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.PUT, \"https://website-url.ir/api/files/\" + %5$s, \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "files-update",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Update File %m.varMap ○ Token %s ○ Content %s ○ Password %s ○ File ID %s"
+    },
+    {
+      "code": "%1$s = new HashMap<>();\n%1$s.put(\"Authorization\", \"Bearer \" + %2$s);\n%1$s.put(\"password\", %3$s);\n%1$s.setParams(%1$s, RequestNetworkController.REQUEST_PARAM);\n%1$s.startRequestNetwork(RequestNetworkController.DELETE, \"https://website-url.ir/api/files/\" + %4$s, \"\", _%1$s_request_listener);",
+      "color": "#FF0066FF",
+      "name": "files-delete",
+      "typeName": "",
+      "palette": "12",
+      "type": " ",
+      "spec": "Delete File %m.varMap ○ Token %s ○ Password %s ○ File ID %s"
+    }
+  ]
